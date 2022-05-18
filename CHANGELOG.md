@@ -9,3 +9,7 @@
 ## 0.0.3
 
 * more fixed
+
+## 0.0.5
+
+*  fixed STC Pay

@@ -137,7 +137,7 @@ class MoyasarPayment {
   /// * [transactionUrl] 	URL to confirm payment authorization.
   /// * [otpValue] 
  
-  Future StcPayOtp(
+  Future stcPayOtp(
     {
       required String transactionUrl,
       required String otpValue

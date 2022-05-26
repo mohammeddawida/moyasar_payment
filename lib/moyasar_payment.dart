@@ -9,6 +9,7 @@ library moyasar_payment;
 import 'dart:convert';
 import 'package:flutter_pay/flutter_pay.dart';
 import 'package:http/http.dart' as http;
+import 'package:moyasar_payment/model/paymodel.dart';
 
 class MoyasarPayment {
   // static const MethodChannel _channel = MethodChannel('moyaser_payment');
@@ -44,8 +45,9 @@ class MoyasarPayment {
       if(description != null ){
         data['description'] = description;
       }
-    
-    return await http.post(Uri.parse(moyasarApi), body: json.encode(data), headers: headers);
+      http.Response res =  await http.post(Uri.parse(moyasarApi), body: json.encode(data), headers: headers);
+    PayModel pay = PayModel.fromJson(jsonDecode(res.body));
+    return  pay;
   }
   /// # Apple Pay
   /// * All parameters are [amount], [publishableKey], [applepayMerchantId], [paymentItems], [currencyCode] and [countryCode] must be non-null.

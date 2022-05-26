@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:moyasar_payment/moyasar_payment.dart';
-
+import 'package:moyasar_payment/model/paymodel.dart';
 void main() {
   runApp(const MyApp());
 }
@@ -25,10 +25,18 @@ class _MyAppState extends State<MyApp> {
         body: Center(
           child: InkWell(
             onTap: ()async{
-              
-              await MoyasarPayment().creditCard(amount: 20.0, publishableKey: 'publishableKey', cardHolderName: 'cardHolderName', cardNumber: 'cardNumber', cvv: 'cvv', expiryManth: 'expiryManth', expiryYear: 'expiryYear', callbackUrl: 'callbackUrl');
+              PayModel pay = await MoyasarPayment().
+              creditCard(amount: 20.0, 
+              publishableKey: 'pk_xxxx', 
+              cardHolderName: 'mahmmd awad', 
+              cardNumber: '4111111111111111', 
+              cvv: '123', 
+              expiryManth: '04', 
+              expiryYear: '23', 
+              callbackUrl: 'http:\\example.com\\');
+              print(pay.toJson());
             },
-            child: Text('gdg'))
+            child: Text('pay'))
         ),
       ),
     );

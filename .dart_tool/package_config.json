@@ -25,6 +25,7 @@
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
+    {
       "name": "clock",
       "rootUri": "file:///C:/flutter/.pub-cache/hosted/pub.dartlang.org/clock-1.1.0",
       "packageUri": "lib/",
@@ -74,7 +75,7 @@
     },
     {
       "name": "http_parser",
-      "rootUri": "file:///C:/flutter/.pub-cache/hosted/pub.dartlang.org/http_parser-4.0.0",
+      "rootUri": "file:///C:/flutter/.pub-cache/hosted/pub.dartlang.org/http_parser-4.0.1",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -169,7 +170,7 @@
       "languageVersion": "2.15"
     }
   ],
-  "generated": "2022-05-11T18:01:00.749017Z",
+  "generated": "2022-05-26T16:41:17.366282Z",
   "generator": "pub",
   "generatorVersion": "2.16.2"
 }

@@ -1,6 +1,6 @@
-# example
+# moyasar_payment_example
 
-A new Flutter project.
+Demonstrates how to use the moyasar_payment plugin.
 
 ## Getting Started
 

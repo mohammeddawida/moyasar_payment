@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:moyasar_payment/moyasar_payment.dart';
 import 'package:moyasar_payment/model/paymodel.dart';
+import 'package:moyasar_payment/model/source/applepaymodel.dart';
+import 'package:moyasar_payment/moyasar_payment.dart';
+
 void main() {
   runApp(const MyApp());
 }
@@ -13,8 +15,6 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-
-
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -24,19 +24,27 @@ class _MyAppState extends State<MyApp> {
         ),
         body: Center(
           child: InkWell(
-            onTap: ()async{
-              PayModel pay = await MoyasarPayment().
-              creditCard(amount: 20.0, 
-              publishableKey: 'pk_xxxx', 
-              cardHolderName: 'mahmmd awad', 
-              cardNumber: '4111111111111111', 
-              cvv: '123', 
-              expiryManth: '04', 
-              expiryYear: '23', 
-              callbackUrl: 'http:\\example.com\\');
-              print(pay.toJson());
+            onTap: () async {
+
+              PayModel data = await MoyasarPayment().applePay(
+                  amount: 1.0,
+                  publishableKey:
+                      "pk_live_xxxxx",
+                  applepayMerchantId: "merchant.xxxxx",
+                  paymentItems: {'Item': 1.0},
+                  currencyCode: "SAR",
+                  countryCode: "SA");
+              if (data.type != null) {
+                print(data.message);
+              } else {
+                ApplePayModel applePayModel = ApplePayModel.fromJson(data.source);
+                print(applePayModel.toJson());
+                print(data.id);
+                
+              }
             },
-            child: Text('pay'))
+            child: Text('Pay'),
+          ),
         ),
       ),
     );

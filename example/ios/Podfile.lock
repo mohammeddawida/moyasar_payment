@@ -1,0 +1,22 @@
+PODS:
+  - Flutter (1.0.0)
+  - moyasar_payment (0.0.1):
+    - Flutter
+
+DEPENDENCIES:
+  - Flutter (from `Flutter`)
+  - moyasar_payment (from `.symlinks/plugins/moyasar_payment/ios`)
+
+EXTERNAL SOURCES:
+  Flutter:
+    :path: Flutter
+  moyasar_payment:
+    :path: ".symlinks/plugins/moyasar_payment/ios"
+
+SPEC CHECKSUMS:
+  Flutter: 50d75fe2f02b26cc09d224853bb45737f8b3214a
+  moyasar_payment: 1e93556dfa66460ef80c7d2e84aa12187f661c3e
+
+PODFILE CHECKSUM: c4c93c5f6502fe2754f48404d3594bf779584011
+
+COCOAPODS: 1.11.3

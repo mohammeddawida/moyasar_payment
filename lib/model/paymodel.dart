@@ -21,7 +21,7 @@ class PayModel {
   late String updatedAt; // modification timestamp in ISO 8601 format.
   Object? metadata; // metadata object (default: null)
   late var source; // source object defined the type of payment.
-  String? type ;
+  String? type;
   String message = '';
 
   PayModel(

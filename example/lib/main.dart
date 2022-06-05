@@ -25,11 +25,9 @@ class _MyAppState extends State<MyApp> {
         body: Center(
           child: InkWell(
             onTap: () async {
-
               PayModel data = await MoyasarPayment().applePay(
                   amount: 1.0,
-                  publishableKey:
-                      "pk_live_xxxxx",
+                  publishableKey: "pk_live_xxxxx",
                   applepayMerchantId: "merchant.xxxxx",
                   paymentItems: {'Item': 1.0},
                   currencyCode: "SAR",
@@ -37,10 +35,10 @@ class _MyAppState extends State<MyApp> {
               if (data.type != null) {
                 print(data.message);
               } else {
-                ApplePayModel applePayModel = ApplePayModel.fromJson(data.source);
+                ApplePayModel applePayModel =
+                    ApplePayModel.fromJson(data.source);
                 print(applePayModel.toJson());
                 print(data.id);
-                
               }
             },
             child: Text('Pay'),

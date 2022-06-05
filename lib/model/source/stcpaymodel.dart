@@ -1,6 +1,4 @@
-
-
-class STCPayModel{
+class STCPayModel {
   String? type;
   String? mobile;
   String? referenceNumber;
@@ -9,15 +7,8 @@ class STCPayModel{
   String? transactionUrl;
   String? message;
 
-  STCPayModel(
-    this.type,
-    this.mobile,
-    this.referenceNumber,
-    this.branch,
-    this.cashier,
-    this.transactionUrl,
-    this.message
-  );
+  STCPayModel(this.type, this.mobile, this.referenceNumber, this.branch,
+      this.cashier, this.transactionUrl, this.message);
 
   STCPayModel.fromJson(Map<String, dynamic> json) {
     type = json['type'];
@@ -31,13 +22,13 @@ class STCPayModel{
 
   Map<String, dynamic> toJson() {
     final Map<String, dynamic> data = <String, dynamic>{};
-    data['type'] = type ;
-    data['mobile'] = mobile ;
-    data['reference_number'] = referenceNumber ;
-    data['branch'] = branch ;
-    data['cashier'] = cashier ;
-    data['transaction_url'] = transactionUrl ;
+    data['type'] = type;
+    data['mobile'] = mobile;
+    data['reference_number'] = referenceNumber;
+    data['branch'] = branch;
+    data['cashier'] = cashier;
+    data['transaction_url'] = transactionUrl;
     data['message'] = message;
-    return data; 
+    return data;
   }
 }

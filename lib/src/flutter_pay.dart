@@ -49,9 +49,8 @@ class FlutterPay {
 
     try {
       var response = await _channel.invokeMethod('requestPayment', params);
-      if (response.runtimeType == String) {
         return response;
-      }
+      
     } on PlatformException catch (error) {
       if (error.code == "userCancelledError") {
         print(error.message);

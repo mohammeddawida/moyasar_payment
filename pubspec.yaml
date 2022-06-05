@@ -29,7 +29,7 @@ flutter:
       ios:
         pluginClass: MoyasarPaymentPlugin
       android:
-        package: com.mahmmed.moyasarpayment
+        package: com.example.moyasar_payment
         pluginClass: MoyasarPaymentPlugin
   # This section identifies this Flutter project as a plugin project.
   # The 'pluginClass' and Android 'package' identifiers should not ordinarily

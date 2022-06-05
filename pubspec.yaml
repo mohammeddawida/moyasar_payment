@@ -1,6 +1,6 @@
 name: moyasar_payment
 description: Flutter library for Moyasar. Supports Apple Pay, STC Pay and Credit Card.
-version: 0.0.8
+version: 0.0.9
 homepage: https://mahmmd.info/
 
 environment:
@@ -26,6 +26,9 @@ flutter:
   plugin:
     platforms:
       ios:
+        pluginClass: MoyasarPaymentPlugin
+      android:
+        package: com.mahmmed.moyasarpayment
         pluginClass: MoyasarPaymentPlugin
   # This section identifies this Flutter project as a plugin project.
   # The 'pluginClass' and Android 'package' identifiers should not ordinarily

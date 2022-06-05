@@ -52,19 +52,6 @@ class FlutterPay {
       if (response.runtimeType == String) {
         return response;
       }
-      var payResponse = Map<String, String>.from(response);
-      if (payResponse == null) {
-        throw FlutterPayError(description: "Pay response cannot be parsed");
-      }
-
-      var paymentToken = payResponse["token"];
-      if (paymentToken != null) {
-        print("Payment token: $paymentToken");
-        return paymentToken;
-      } else {
-        print("Payment token: null");
-        return "";
-      }
     } on PlatformException catch (error) {
       if (error.code == "userCancelledError") {
         print(error.message);

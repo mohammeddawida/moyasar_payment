@@ -114,7 +114,7 @@ class MoyasarPayment {
   /// * [cardHolderName] Card holder’s name.
   /// * [cardNumber] The card number, as a string without any separators.
   /// * [cvv] Card security code. CVV or CVC
-  /// * [expiryManth] Two digit number representing the card’s expiration month.
+  /// * [expiryMonth] Two digit number representing the card’s expiration month.
   /// * [expiryYear] Two or Four digit number representing the card’s expiration year.
   /// * [callbackUrl] URL of customer’s website page to be redirected to when using payment form method or after 3-D secure transaction (e.g., https://example.com/orders)
   Future creditCard({
@@ -124,16 +124,16 @@ class MoyasarPayment {
     required String cardHolderName,
     required String cardNumber,
     required String cvv,
-    required String expiryManth,
+    required String expiryMonth,
     required String expiryYear,
     required String callbackUrl,
   }) async {
     var source = {
       'type': 'creditcard',
       'name': cardHolderName,
-      'number': int.parse(cardNumber),
-      'cvc': int.parse(cvv),
-      'month': expiryManth,
+      'number': cardNumber,
+      'cvc': cvv,
+      'month': expiryMonth,
       'year': expiryYear
     };
 

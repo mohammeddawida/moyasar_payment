@@ -123,16 +123,16 @@ class MoyasarPayment {
     required String publishableKey,
     required String cardHolderName,
     required String cardNumber,
-    required String cvv,
-    required String expiryManth,
-    required String expiryYear,
+    required int cvv,
+    required int expiryManth,
+    required int expiryYear,
     required String callbackUrl,
   }) async {
     var source = {
       'type': 'creditcard',
       'name': cardHolderName,
-      'number': int.parse(cardNumber),
-      'cvc': int.parse(cvv),
+      'number': cardNumber,
+      'cvc': cvv,
       'month': expiryManth,
       'year': expiryYear
     };

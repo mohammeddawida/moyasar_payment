@@ -1,6 +1,6 @@
 # Moyasar Flutter Plugin
 
-<img src="[https://github.com/mahmmd/moyasar_payment/blob/main/moyasar-flutter.png](https://mohammed-dev.com/moyasar-flutter.png)" width="500" />
+<img src="https://mohammed-dev.com/moyasar-flutter.png" width="500" />
 
 ## :rocket: Installation
 

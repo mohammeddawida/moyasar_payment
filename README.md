@@ -81,10 +81,10 @@ CreditcardModel creditcardModel = CreditcardModel.fromJson(res.source);
 ```
 
 #### Integrate STC Pay
-Import `creditcardmodel.dart`
+Import `stcpaymodel.dart`
 
 ```dart
-import 'package:moyasar_payment/model/source/creditcardmodel.dart';
+import 'package:moyasar_payment/model/source/stcpaymodel.dart';
 ```
 
 ```dart

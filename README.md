@@ -12,6 +12,18 @@ Add this to `dependencies` in your app's `pubspec.yaml`
 moyasar_payment : latest_version
 ```
 
+
+## :iphone: IOS version
+
+:warning: Make sure that the IOS version is set to `12.2` in your app's `ios/PodFile`
+
+```diff
+diff --git a/ios/PodFile b/ios/PodFile
+-	 # platform :ios, '11' 
++	 platform :ios, '12.2' 
+
+```
+
 ## :bookmark: Usage
 
 <!-- Sample code to integrate can be found in [example/lib/main.dart](example/lib/main.dart). -->

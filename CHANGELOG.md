@@ -26,3 +26,5 @@
 * Add Source Model STC Pay , Apple Pay and Credit Card
 
 ## 0.0.9
+
+## 0.1.2

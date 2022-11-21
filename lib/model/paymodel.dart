@@ -23,6 +23,7 @@ class PayModel {
   late var source; // source object defined the type of payment.
   String? type;
   String message = '';
+  dynamic error ;
 
   PayModel(
       this.id,
@@ -44,7 +45,9 @@ class PayModel {
       this.metadata,
       this.source,
       this.type,
-      this.message);
+      this.message,
+      this.error
+      );
 
   PayModel.fromJson(Map<String, dynamic> json) {
     if (json['type'] == null) {
@@ -69,6 +72,7 @@ class PayModel {
     } else {
       type = json['type'];
       message = json['message'] ?? '';
+      error = json['error'] ?? '';
     }
   }
 
@@ -94,6 +98,7 @@ class PayModel {
     data['source'] = source;
     data['type'] = type;
     data['message'] = message;
+    data['error'] = error;
     return data;
   }
 }

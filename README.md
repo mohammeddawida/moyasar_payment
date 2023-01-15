@@ -83,9 +83,9 @@ PayModel res = await MoyasarPayment().creditCard(
     publishableKey: 'publishable_key', 
     cardHolderName: 'cardHolderName', 
     cardNumber: 'cardNumber', 
-    cvv: 'cvv', 
-    expiryManth: 'expiryDate_manth', 
-    expiryYear: 'expiryDate_yar', 
+    cvv: 123, 
+    expiryManth: 12, 
+    expiryYear: 25, 
     callbackUrl: 'https://example.com/orders');
 
 CreditcardModel creditcardModel = CreditcardModel.fromJson(res.source);

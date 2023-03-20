@@ -69,10 +69,13 @@ class PayModel {
       updatedAt = json['updatedAt'] ?? '';
       metadata = json['metadata'] ?? '';
       source = json['source'];
+      type = json['type'];
+      message = json['message'] ?? '';
+      error = json['errors'] ?? '';
     } else {
       type = json['type'];
       message = json['message'] ?? '';
-      error = json['error'] ?? '';
+      error = json['errors'] ?? '';
     }
   }
 
